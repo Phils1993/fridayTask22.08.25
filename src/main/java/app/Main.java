@@ -7,20 +7,23 @@ import entity.TaskList;
 import java.time.LocalDate;
 import java.util.List;
 
-import static services.AddTasks.createSampleGardenTask;
-import static services.AddTasks.createSampleTaskList;
+import static services.AddTasks.*;
 
 public class Main<T> {
     public static void main(String[] args) {
         TaskList personalList = createSampleTaskList();
         TaskList gardenList = createSampleGardenTask();
+        TaskList shoppingList = createSampleShoppingList();
 
         System.out.println("=== Min personal list ===");
         personalList.printAllTasks();
         System.out.println("=== Min garden list ===");
         gardenList.printAllTasks();
+        System.out.println("=== Min shopping list ===");
+        shoppingList.printAllTasks();
 
 
+        /*
         // filter på keyword på personlig liste:
         List<Task> filteredByKeywordPersonalList = personalList.filterTaskByDescription("Mobil");
         System.out.println("=== Min filtered by keyword Personal list ===");
@@ -60,5 +63,7 @@ public class Main<T> {
         List<Task> GardenTaskInFuture = gardenList.taskInFuture();
         System.out.println("=== Min Garden Task in Future ===");
         gardenList.printTasksByKeyword(GardenTaskInFuture);
+
+         */
     }
 }

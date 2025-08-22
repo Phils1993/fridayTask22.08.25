@@ -1,6 +1,7 @@
 package services;
 
 import entity.GardenTask;
+import entity.ShoppingList;
 import entity.Task;
 import entity.TaskList;
 
@@ -36,4 +37,20 @@ public class AddTasks {
                 "Terrassen"));
         return gardenTaskList;
     }
+
+    public static TaskList<Task> createSampleShoppingList() {
+        TaskList<Task> shoppingList = new TaskList<>();
+        shoppingList.addTask(new ShoppingList(
+                "Køb mælk", "Letmælk 1 liter", LocalDate.now(), "Netto"));
+        shoppingList.addTask(new ShoppingList(
+                "Køb rugbrød", "Kernesund rugbrød", LocalDate.now().plusDays(1), "Føtex"));
+        shoppingList.addTask(new ShoppingList(
+                "Køb frugt", "Æbler og bananer", LocalDate.now().plusDays(2), "Rema 1000"));
+        shoppingList.addTask(new ShoppingList(
+                "Køb kaffe", "Friskmalet kaffe", LocalDate.now().plusDays(3), "Bilka"));
+        shoppingList.addTask(new ShoppingList(
+                "Køb kylling", "Økologisk kyllingebryst", LocalDate.now().plusDays(4), "Irma"));
+        return shoppingList;
+    }
+
 }
