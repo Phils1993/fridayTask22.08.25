@@ -55,12 +55,13 @@ public class TaskList <T extends Task> implements Iterable<T> {
     }
 
 
-    // Udskrift med printf – uden parameter
+    // Simple print for all tasks
     public void printAllTasks() {
         tasks.forEach(System.out::println);
     }
 
-    public void printTasksByKeyword(List<T> tasksToPrint) {
+    // print with a specific list in mind
+    public void printAllTaskFromList(List<T> tasksToPrint) {
         tasksToPrint.forEach(task ->
                 System.out.printf("%-20s | %-40s | %10s%n",
                         task.getTitle(),
